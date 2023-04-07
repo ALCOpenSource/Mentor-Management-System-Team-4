@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import AuthButton from "./Buttons/AuthButton";
+import Button from "./Buttons/Button";
 
 const Box = styled.div`
   ${tw`
@@ -17,7 +18,7 @@ flex font-Mukta font-semibold text-[32px] leading-[53px] text-[#141414] mb-4
 
 const Description = styled.div`
   ${tw`
-font-Mukta font-normal text-[16px] leading-[27px] text-[#808080]
+font-Mukta font-normal text-[16px] leading-[27px] text-[#808080] w-full max-w-[426px]
 `}
 `;
 
@@ -54,8 +55,10 @@ function AuthSetPassword() {
         *Your new password must be different from previously used password.
       </Description>
 
-      <div className="mt-12">
-        <AuthButton placeholder="Reset Password" />
+      <div css={[tw`w-full mt-3 max-w-[426px]`]}>
+        <Button color="primary" type="button">
+          Reset Password
+        </Button>
       </div>
     </Box>
   );

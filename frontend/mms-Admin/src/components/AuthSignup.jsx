@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import AuthButton from "./Buttons/AuthButton";
+import Button from "./Buttons/Button";
 
 const Box = styled.div`
   ${tw`
@@ -28,10 +29,10 @@ function AuthSignup() {
         An email has been sent to your registered email.
       </Description>
       <Description>Follow the link to reset your password.</Description>
-      <div className="mt-12">
-        <AuthButton placeholder="Done"/>
-
-     
+      <div css={[tw` mt-8 w-full max-w-[426px]`]}>
+        <Button color="primary" type="button">
+          Done
+        </Button>
       </div>
     </Box>
   );

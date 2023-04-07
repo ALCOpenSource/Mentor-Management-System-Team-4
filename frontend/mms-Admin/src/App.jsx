@@ -1,10 +1,11 @@
-import { Navigate, Route, Routes } from "react-router-dom";
-import Profile from "./page/Profile";
-import Layout from "./Layouts/Layout";
-import Home from "./page/Home";
-import Signup from "./page/Signup";
-import ForgotPassword from "./page/ForgotPassword";
-import Login from "./page/Login";
+import React from 'react';
+import { Route, Routes } from "react-router-dom";
+import Login from './page/Login';
+import Signup from './page/Signup';
+import ForgotPassword from './page/ForgotPassword';
+import Home from './page/Home';
+import { Layout } from './Layouts/Layout';
+
 function App() {
   return (
     <>

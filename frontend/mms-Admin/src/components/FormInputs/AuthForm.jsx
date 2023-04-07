@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import AuthButton from "../Buttons/AuthButton";
 import { Link } from "react-router-dom";
+import AuthButton from "../Buttons/AuthButton";
 import GogleSignup from "../Buttons/GoogleSignup";
+import Button from "../Buttons/Button";
 
 const Wrapper = styled.div`
   ${tw`
-flex flex-col relative text-start items-start px-2
+flex flex-col relative text-start items-start px-4 w-full 
 `}
 `;
 
@@ -56,7 +57,7 @@ font-Mukta font-normal text-[24px] leading-[40px] text-[#808080]
 
 const ForgotPassword = styled.p`
   ${tw`
-font-Mukta font-bold text-[16px] leading-[27px] text-[#141414] w-full
+font-Mukta font-bold text-[16px] leading-[27px] text-[#141414]
 `}
 `;
 
@@ -78,7 +79,7 @@ function AuthForm() {
             justifyContent: "center",
             margin: "auto",
             gap: "4px",
-            marginBottom: "50px",
+            marginBottom: "20px",
             width: "100%",
           }}
         >
@@ -86,7 +87,7 @@ function AuthForm() {
           <Description>Login to continue</Description>
         </div>
         <InputWrapper>
-          <InputBase placeholder="email" type="email" />
+          <InputBase placeholder="Email" type="email" />
           <InputBase placeholder="Password" type={"password"} />
         </InputWrapper>
 
@@ -96,10 +97,12 @@ function AuthForm() {
             display: "flex",
             alignItems: "center",
             marginTop: "30px",
+            maxWidth: "426px",
           }}
-          className="lg:w-[426px]"
         >
-          <AuthButton placeholder="Login" />
+          <Button color="primary" type="button">
+            Login
+          </Button>
         </div>
 
         <div
@@ -107,28 +110,45 @@ function AuthForm() {
             display: "flex",
             justifyContent: "space-between",
             width: "100%",
-            marginTop: "20px",
+            marginTop: "18px",
+            maxWidth: "426px",
           }}
-          className="lg:min-w-[426px]"
         >
-          <div></div>
-          <Link to="/accounts/forgot-password">
-            <ForgotPassword style={{ textDecorationLine: "underline" }}>
-              Forgot Password?
-            </ForgotPassword>
-          </Link>
+          <div className="flex  w-[20px] "></div>
+          <div>
+            <Link to="/account/forgot-password">
+              <ForgotPassword
+                style={{
+                  textDecorationLine: "underline",
+                }}
+              >
+                Forgot Password?
+              </ForgotPassword>
+            </Link>
+          </div>
         </div>
 
-        <div className="mt-10 w-full flex  lg:w-[426px]  ">
-          <GogleSignup />
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            marginTop: "10px",
+            maxWidth: "426px",
+          }}
+        >
+          <Button color="white" type="button">
+            Signin with Google
+          </Button>
         </div>
-        <div className=" mt-10  flex justify-between w-full">
-          <div className=" w-full "></div>
 
-          <Link to="/accounts/forgot-password" className="w-full">
+        <div css={[tw` mt-4  flex justify-between w-full max-w-[426px] `]}>
+          <div css={[tw`w-full`]}></div>
+
+          <Link to="/" css={[tw`w-full`]}>
             <Signup>New User? Signup</Signup>
           </Link>
-          <div className=" w-full "></div>
+          <div css={[tw`w-full`]}></div>
         </div>
       </Wrapper>
     </form>

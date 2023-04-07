@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import AuthLogoAndText from "../components/AuthLogoAndText";
-import AuthSignup from "../components/AuthSignup";
 import AuthForm from "../components/FormInputs/AuthForm";
+
 
 const Box = styled.section`
   ${tw`
@@ -32,10 +32,11 @@ const LeftContainer = styled.div`
 
 const RightContainer = styled.div`
   ${tw`
-  w-full px-2  sm:py-16 lg:w-1/2 lg:px-8 lg:py-24 items-center justify-center m-auto 
+  w-full sm:px-16 py-10 lg:w-1/2 lg:px-8 lg:py-24 items-center justify-center m-auto 
 `}
 `;
-function Signup() {
+
+function Login() {
   return (
     <Box>
       <Container>
@@ -44,9 +45,9 @@ function Signup() {
             <AuthLogoAndText />
           </LeftContainer>
           <RightContainer>
-            <div className="w-full items-center m-auto sm:max-w-[426px] py-10 ">
-              <AuthSignup />
-            </div>
+           <div className="w-full items-center m-auto sm:max-w-[426px] py-10 ">
+           <AuthForm />
+           </div>
           </RightContainer>
         </Wrapper>
       </Container>
@@ -54,4 +55,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Login;

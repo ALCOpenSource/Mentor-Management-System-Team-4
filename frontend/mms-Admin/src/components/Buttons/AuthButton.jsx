@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
+import PropTypes from "prop-types";
 
 const Button = styled.button`
   ${tw`
@@ -18,11 +19,16 @@ leading-[30px]
 text-[#FFFFFF]
 bg-primary
 rounded-[10px]
-lg:min-w-[426px]
+lg:w-[426px]
 `}
 `;
-function AuthButton({placeholder}) {
+function AuthButton(props) {
+  const { placeholder } = props;
   return <Button>{placeholder}</Button>;
 }
 
 export default AuthButton;
+
+AuthButton.propTypes = {
+  placeholder: PropTypes.string.isRequired,
+};

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import AuthLogoAndText from '../components/AuthLogoAndText';
-// import AuthSignup from '../components/AuthSignup';
-import AuthSetPassword from '../components/AuthSetPassword';
+import AuthLogoAndText from "../components/AuthLogoAndText";
+import AuthSignup from "../components/AuthSignup";
+
 
 const Box = styled.section`
   ${tw`
@@ -26,28 +26,16 @@ flex flex-wrap h-full items-center justify-center lg:justify-between p-0 w-full
 
 const LeftContainer = styled.div`
   ${tw`
-  relative  w-full h-screen lg:w-1/2 bg-primary items-center justify-center m-auto flex p-4
+  relative  w-full h-full lg:w-1/2 bg-primary items-center justify-center m-auto flex p-4
 `}
 `;
 
 const RightContainer = styled.div`
   ${tw`
-  w-full px-2  sm:py-16 lg:w-1/2 lg:px-8 lg:py-24 items-center justify-center m-auto 
+  w-full px-6  sm:px-16 py-10 lg:w-1/2 lg:px-8 lg:py-24  items-center justify-center m-auto 
 `}
 `;
-
-const Title = styled.div`
-  ${tw`
-flex font-Mukta font-semibold text-[32px] leading-[53px] text-[#141414] mb-3
-`}
-`;
-
-const Description = styled.div`
-  ${tw`
-font-Mukta font-normal text-[24px] leading-[40px] text-[#808080]
-`}
-`;
-function ForgotPassword() {
+function Signup() {
   return (
     <Box>
       <Container>
@@ -57,7 +45,7 @@ function ForgotPassword() {
           </LeftContainer>
           <RightContainer>
             <div className="w-full items-center m-auto sm:max-w-[426px] py-10 ">
-              <AuthSetPassword />
+              <AuthSignup />
             </div>
           </RightContainer>
         </Wrapper>
@@ -66,4 +54,4 @@ function ForgotPassword() {
   );
 }
 
-export default ForgotPassword;
+export default Signup;
