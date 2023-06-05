@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import bcrypt from 'bcryptjs';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { nanoid } from 'nanoid';
 import config from '../config/config';
 import models from '../database/models';
