@@ -7,16 +7,15 @@ coordination of mentors needed to execute projects, ranging from recruitment to 
 
 ## Techonologies
 
-*   Frontend
-*   Backend
-*   Database
-*   Deployment env
-
+*   Frontend : ReactJS, Material UI, Redux Toolkit, Formik, Yup
+*   Backend: NodeJS Express, ORM(Sequelize), Security(JWT), Validation(Joi)
+*   Database:  Database(PgSQL)
+*   Deployment env: Fontend (AWS Amplify) , Backend : Render.com
 ## How to contributing to this project
 
 To get it up and running on your local machine, follow the steps below:
 
-*   Clone the repo with the command \`git clonn
+*   Clone the repo with the command \`git clone https://github.com/ALCOpenSource/Mentor-Management-System-Team-4.git
 
 *   Indicate your interest to work on any issue. "eg. I want to work on this issue or I am interested in this issue"
 
@@ -40,15 +39,21 @@ To get it up and running on your local machine, follow the steps below:
 
 *   Navigate to the frontend directory with the command `cd frontend mms-Admin`
 
-*   Install all the dependencies with the command `npm install`
+*   Install all the dependencies with the command `yarn install`
 
-*   Start the app with the command `npm run dev`
+*   Start the app with the command `yarn dev`
 
 *   Navigate to the app on your browser with the url `http://localhost:****` where \*\*\*\* is the port number displayed on your terminal.
 
 #### Backend
 
-Beckend
+*   Navigate to the project directory with the command `cd Mentor-Management-System-Team-4`
+
+*   Navigate to the frontend directory with the command `cd backend`
+
+*   Install all the dependencies with the command `yarn install`
+
+*   Start the app with the command `yarn dev`
 
 #### Design
 
@@ -63,10 +68,10 @@ NOTE: Strictly adhere to the style guide on the design, buttons, texts etc.
 
 Raise any identified issue with your TTL
 
-## Other commands available
+## Before you push your code online
 
-1.  `npm run build` - Builds the app for production to the `dist` folder.
-2.  `npm run lint` - Lints the codebase.
-3.  `npm run lint:fix` - Lints the codebase and fixes auto-fixable error.
+1.  `yarn lint:fix` -Lints the codebase and fixes auto-fixable error.
+2.  `npm build` -  Builds the app for production to the `dist` folder.
+
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/098d739ea9504dadabbcc4898eaff86e)](https://app.codacy.com/gh/ALCOpenSource/Mentor-Management-System-Team-1/dashboard?utm_source=gh\&utm_medium=referral\&utm_content=\&utm_campaign=Badge_grade)
